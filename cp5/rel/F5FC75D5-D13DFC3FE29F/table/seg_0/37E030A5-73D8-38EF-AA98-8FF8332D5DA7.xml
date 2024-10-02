@@ -1,0 +1,73 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="37E030A5-73D8-38EF-AA98-8FF8332D5DA7" name="Colaborador">
+<createdBy>labsfiap</createdBy>
+<createdTime>2024-10-02 12:27:08 UTC</createdTime>
+<generatorID>F808E796-EB2D-5A34-8840-0D371205FC5A</generatorID>
+<ownerDesignName>cp5</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_colaborador" id="AA811F03-FBA4-0CA9-019F-D29DBB4FAAF5">
+<createdBy>labsfiap</createdBy>
+<createdTime>2024-10-02 12:27:08 UTC</createdTime>
+<generatorID>40B2C2D8-2ADD-74FE-AB94-D1E29F03FD6C</generatorID>
+<ownerDesignName>cp5</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nome" id="F61DB9E3-34BE-947F-7D54-152C576F4DF6">
+<createdBy>labsfiap</createdBy>
+<createdTime>2024-10-02 12:27:08 UTC</createdTime>
+<generatorID>E15B2863-82F8-DAE5-E1B5-4F59951D991A</generatorID>
+<ownerDesignName>cp5</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255</dataTypeSize>
+<ownDataTypeParameters>255,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="cpf" id="74500125-3713-E4C9-A835-EC7CFF83AA9F">
+<createdBy>labsfiap</createdBy>
+<createdTime>2024-10-02 12:27:08 UTC</createdTime>
+<generatorID>04F3D40C-A0DE-24BA-7DEE-68664A9EB2BC</generatorID>
+<ownerDesignName>cp5</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="cargo" id="397D24EB-41EF-AA0F-8D1D-E526E3B74C56">
+<createdBy>labsfiap</createdBy>
+<createdTime>2024-10-02 12:27:08 UTC</createdTime>
+<generatorID>62E1C069-8B18-5A75-0460-358EA4654005</generatorID>
+<ownerDesignName>cp5</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255</dataTypeSize>
+<ownDataTypeParameters>255,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="A615E969-92E6-C8A1-30B5-9E93C3CE37D3" name="Colaborador_PK">
+<createdBy>labsfiap</createdBy>
+<createdTime>2024-10-02 12:27:08 UTC</createdTime>
+<generatorID>961CEC62-9005-7F2F-671F-2EFCF81D6C81</generatorID>
+<ownerDesignName>cp5</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="AA811F03-FBA4-0CA9-019F-D29DBB4FAAF5"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

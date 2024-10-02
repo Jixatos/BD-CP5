@@ -1,0 +1,100 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="80CE9A6F-D0AF-F11B-1E8B-3CCB5C060A5B" name="Pagamento">
+<createdBy>labsfiap</createdBy>
+<createdTime>2024-10-02 12:27:08 UTC</createdTime>
+<generatorID>C840F04A-E771-D1A9-3AED-0EDD0CCBAEA9</generatorID>
+<ownerDesignName>cp5</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_pagamento" id="8C2C048E-B446-6E26-3D23-D003345DBA7C">
+<createdBy>labsfiap</createdBy>
+<createdTime>2024-10-02 12:27:08 UTC</createdTime>
+<generatorID>B11D15F3-54E3-F29F-FA20-B8FDC5F75E58</generatorID>
+<ownerDesignName>cp5</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="data" id="1C3F8CB9-00F0-1172-21A0-52576AF40249">
+<createdBy>labsfiap</createdBy>
+<createdTime>2024-10-02 12:27:08 UTC</createdTime>
+<generatorID>A5F19234-C252-1EDB-68CB-1E66F0D8FE21</generatorID>
+<ownerDesignName>cp5</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="forma" id="629D0FF0-78D9-2AB7-57C2-A4977B6EE39A">
+<createdBy>labsfiap</createdBy>
+<createdTime>2024-10-02 12:27:08 UTC</createdTime>
+<generatorID>AB7C42A5-9EA7-348F-47CA-96354FFAAE1F</generatorID>
+<ownerDesignName>cp5</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="valor" id="5C6ABD90-50CD-8B29-D81C-618A06E44BFA">
+<createdBy>labsfiap</createdBy>
+<createdTime>2024-10-02 12:27:08 UTC</createdTime>
+<generatorID>B2126C97-FCB2-FC64-79C4-22518E120F34</generatorID>
+<ownerDesignName>cp5</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>2</dataTypePrecision>
+<dataTypeScale>8</dataTypeScale>
+<ownDataTypeParameters>,2,8</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Reserva_id_reserva" id="ECCA9E40-4268-1E86-BE01-1B462123AF26">
+<createdBy>labsfiap</createdBy>
+<createdTime>2024-10-02 12:27:08 UTC</createdTime>
+<generatorID>A1A0B09D-5E51-7CAC-8243-834E7285A429</generatorID>
+<ownerDesignName>cp5</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="F10BB864-0584-AD08-FDFC-E823BE3982CB" referredColumn="15A3A44C-3784-082F-C4ED-BBF2FA2C57D1"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="022FC29C-D437-BB1C-F191-2A13782B2920" name="Pagamento_PK">
+<createdBy>labsfiap</createdBy>
+<createdTime>2024-10-02 12:27:08 UTC</createdTime>
+<generatorID>8A1FF48D-872E-46DF-D832-069FDB18CF41</generatorID>
+<ownerDesignName>cp5</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="8C2C048E-B446-6E26-3D23-D003345DBA7C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="CD1411AA-B257-FAC3-36D1-EDEC81015BF0" name="Pagamento_Reserva_FK">
+<createdBy>labsfiap</createdBy>
+<createdTime>2024-10-02 12:27:08 UTC</createdTime>
+<generatorID>79591AA8-F267-0AE5-24B4-A80615DDDFA1</generatorID>
+<ownerDesignName>cp5</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="ECCA9E40-4268-1E86-BE01-1B462123AF26"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

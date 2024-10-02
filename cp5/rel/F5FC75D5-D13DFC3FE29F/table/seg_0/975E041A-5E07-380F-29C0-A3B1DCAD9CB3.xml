@@ -1,0 +1,113 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="975E041A-5E07-380F-29C0-A3B1DCAD9CB3" name="Manutencao">
+<createdBy>labsfiap</createdBy>
+<createdTime>2024-10-02 12:27:08 UTC</createdTime>
+<generatorID>695231B8-2553-6995-FA16-CFC9EA61367F</generatorID>
+<ownerDesignName>cp5</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_manutencao" id="20518907-8DF3-8815-9BD2-3A16A41797D0">
+<createdBy>labsfiap</createdBy>
+<createdTime>2024-10-02 12:27:08 UTC</createdTime>
+<generatorID>F2D343D8-FA8E-CD86-8F9B-4DDDE77F3A0A</generatorID>
+<ownerDesignName>cp5</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="data" id="CE45FFEF-4E86-3BED-3E5B-0946054B91C1">
+<createdBy>labsfiap</createdBy>
+<createdTime>2024-10-02 12:27:08 UTC</createdTime>
+<generatorID>117FBF0F-053D-C5CC-7510-AE289BC56BF2</generatorID>
+<ownerDesignName>cp5</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="desc" id="01A0105B-70F2-96AD-9250-C96957C0595B">
+<createdBy>labsfiap</createdBy>
+<createdTime>2024-10-02 12:27:08 UTC</createdTime>
+<generatorID>458C1E65-36CC-2E95-DA37-06685A476F49</generatorID>
+<ownerDesignName>cp5</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255</dataTypeSize>
+<ownDataTypeParameters>255,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Colaborador_id_colaborador" id="BEEDBB4C-756D-64B2-E2F8-EEC82542E076">
+<createdBy>labsfiap</createdBy>
+<createdTime>2024-10-02 12:27:08 UTC</createdTime>
+<generatorID>44A833F5-DC29-3380-6C08-CB1E68AD8838</generatorID>
+<ownerDesignName>cp5</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="912DE349-9A74-0A61-DF81-E0195FB1A3E1" referredColumn="AA811F03-FBA4-0CA9-019F-D29DBB4FAAF5"/>
+</associations>
+</Column>
+<Column name="Quarto_numero" id="F472D898-120A-A350-A08C-8DA88371EE85">
+<createdBy>labsfiap</createdBy>
+<createdTime>2024-10-02 12:27:08 UTC</createdTime>
+<generatorID>6F2D7438-0FAE-1E50-A391-48B8929BEDA6</generatorID>
+<ownerDesignName>cp5</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="4FDC4CC6-DF9B-12F7-F00C-163852C4E510" referredColumn="5C13B2B8-D27F-AD1E-9239-204E685F4A8E"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="B88E534A-E259-2959-3778-F789C8864EEF" name="Manutencao_PK">
+<createdBy>labsfiap</createdBy>
+<createdTime>2024-10-02 12:27:08 UTC</createdTime>
+<generatorID>18199EDB-BBA4-1097-9BAA-5947F0A74B02</generatorID>
+<ownerDesignName>cp5</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="20518907-8DF3-8815-9BD2-3A16A41797D0"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="9B53A0EA-4229-61E1-6925-0DEDE37F18B8" name="Manutencao_Colaborador_FK">
+<createdBy>labsfiap</createdBy>
+<createdTime>2024-10-02 12:27:08 UTC</createdTime>
+<generatorID>63B6AB06-9109-B80D-3E0E-4CDD28456C80</generatorID>
+<ownerDesignName>cp5</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="BEEDBB4C-756D-64B2-E2F8-EEC82542E076"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="6B5622C4-4B4F-C148-826E-A9D079548520" name="Manutencao_Quarto_FK">
+<createdBy>labsfiap</createdBy>
+<createdTime>2024-10-02 12:27:08 UTC</createdTime>
+<generatorID>53387B53-FB05-38A5-E2C9-D927E25C7249</generatorID>
+<ownerDesignName>cp5</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F472D898-120A-A350-A08C-8DA88371EE85"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

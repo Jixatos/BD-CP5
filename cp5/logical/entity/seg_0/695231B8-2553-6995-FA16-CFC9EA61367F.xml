@@ -1,0 +1,99 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="695231B8-2553-6995-FA16-CFC9EA61367F" name="Manutencao">
+<createdBy>labsfiap</createdBy>
+<createdTime>2024-10-02 12:05:44 UTC</createdTime>
+<ownerDesignName>cp5</ownerDesignName>
+<engineerTo>
+<item key="F5FC75D5-11D1-441E-EC52-D13DFC3FE29F" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id_manutencao" id="F2D343D8-FA8E-CD86-8F9B-4DDDE77F3A0A">
+<createdBy>labsfiap</createdBy>
+<createdTime>2024-10-02 12:05:55 UTC</createdTime>
+<ownerDesignName>cp5</ownerDesignName>
+<engineerTo>
+<item key="F5FC75D5-11D1-441E-EC52-D13DFC3FE29F" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="data" id="117FBF0F-053D-C5CC-7510-AE289BC56BF2">
+<createdBy>labsfiap</createdBy>
+<createdTime>2024-10-02 12:06:06 UTC</createdTime>
+<ownerDesignName>cp5</ownerDesignName>
+<engineerTo>
+<item key="F5FC75D5-11D1-441E-EC52-D13DFC3FE29F" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="desc" id="458C1E65-36CC-2E95-DA37-06685A476F49">
+<createdBy>labsfiap</createdBy>
+<createdTime>2024-10-02 12:06:59 UTC</createdTime>
+<ownerDesignName>cp5</ownerDesignName>
+<engineerTo>
+<item key="F5FC75D5-11D1-441E-EC52-D13DFC3FE29F" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255</dataTypeSize>
+<ownDataTypeParameters>255,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_colaborador" id="44A833F5-DC29-3380-6C08-CB1E68AD8838">
+<createdBy>labsfiap</createdBy>
+<createdTime>2024-10-02 12:17:01 UTC</createdTime>
+<generatorID>63B6AB06-9109-B80D-3E0E-4CDD28456C80</generatorID>
+<ownerDesignName>cp5</ownerDesignName>
+<engineerTo>
+<item key="F5FC75D5-11D1-441E-EC52-D13DFC3FE29F" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<referedAttribute>40B2C2D8-2ADD-74FE-AB94-D1E29F03FD6C</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="numero" id="6F2D7438-0FAE-1E50-A391-48B8929BEDA6">
+<createdBy>labsfiap</createdBy>
+<createdTime>2024-10-02 12:20:27 UTC</createdTime>
+<generatorID>53387B53-FB05-38A5-E2C9-D927E25C7249</generatorID>
+<ownerDesignName>cp5</ownerDesignName>
+<engineerTo>
+<item key="F5FC75D5-11D1-441E-EC52-D13DFC3FE29F" value="true"/>
+</engineerTo>
+<referedAttribute>31CCE05D-CDCB-3E80-ADB5-6D8348B4C9AC</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="18199EDB-BBA4-1097-9BAA-5947F0A74B02" name="Manutencao PK">
+<createdBy>labsfiap</createdBy>
+<createdTime>2024-10-02 12:06:05 UTC</createdTime>
+<ownerDesignName>cp5</ownerDesignName>
+<engineerTo>
+<item key="F5FC75D5-11D1-441E-EC52-D13DFC3FE29F" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>F2D343D8-FA8E-CD86-8F9B-4DDDE77F3A0A</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

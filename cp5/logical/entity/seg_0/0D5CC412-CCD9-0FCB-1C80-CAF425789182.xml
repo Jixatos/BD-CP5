@@ -1,0 +1,138 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="0D5CC412-CCD9-0FCB-1C80-CAF425789182" name="Reserva">
+<createdBy>labsfiap</createdBy>
+<createdTime>2024-10-02 12:07:19 UTC</createdTime>
+<ownerDesignName>cp5</ownerDesignName>
+<engineerTo>
+<item key="F5FC75D5-11D1-441E-EC52-D13DFC3FE29F" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id_reserva" id="A269457F-2B4A-B81C-AD69-BE481B833277">
+<createdBy>labsfiap</createdBy>
+<createdTime>2024-10-02 12:07:27 UTC</createdTime>
+<ownerDesignName>cp5</ownerDesignName>
+<engineerTo>
+<item key="F5FC75D5-11D1-441E-EC52-D13DFC3FE29F" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="dt_reserva" id="CEACDEAB-139D-4932-E91C-2AEBACEDEB07">
+<createdBy>labsfiap</createdBy>
+<createdTime>2024-10-02 12:07:37 UTC</createdTime>
+<ownerDesignName>cp5</ownerDesignName>
+<engineerTo>
+<item key="F5FC75D5-11D1-441E-EC52-D13DFC3FE29F" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="dt_inicio" id="38BE64A4-023A-0F44-345E-27474CD9C38A">
+<createdBy>labsfiap</createdBy>
+<createdTime>2024-10-02 12:07:50 UTC</createdTime>
+<ownerDesignName>cp5</ownerDesignName>
+<engineerTo>
+<item key="F5FC75D5-11D1-441E-EC52-D13DFC3FE29F" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="dt_fim" id="E13C5769-EA17-EAE0-4044-250A7B70A43B">
+<createdBy>labsfiap</createdBy>
+<createdTime>2024-10-02 12:08:10 UTC</createdTime>
+<ownerDesignName>cp5</ownerDesignName>
+<engineerTo>
+<item key="F5FC75D5-11D1-441E-EC52-D13DFC3FE29F" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="valor" id="8C967CC7-161F-3ACA-FE1E-8F6EE3492C2A">
+<createdBy>labsfiap</createdBy>
+<createdTime>2024-10-02 12:08:25 UTC</createdTime>
+<ownerDesignName>cp5</ownerDesignName>
+<engineerTo>
+<item key="F5FC75D5-11D1-441E-EC52-D13DFC3FE29F" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>2</dataTypePrecision>
+<dataTypeScale>8</dataTypeScale>
+<ownDataTypeParameters>,2,8</ownDataTypeParameters>
+</Attribute>
+<Attribute name="status" id="ACC532D4-97CE-6DF5-7AC1-E3AD95690AE2">
+<createdBy>labsfiap</createdBy>
+<createdTime>2024-10-02 12:09:07 UTC</createdTime>
+<ownerDesignName>cp5</ownerDesignName>
+<engineerTo>
+<item key="F5FC75D5-11D1-441E-EC52-D13DFC3FE29F" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="numero" id="02C32D73-0D2D-BD08-6E2F-1487D69EF5B4">
+<createdBy>labsfiap</createdBy>
+<createdTime>2024-10-02 12:23:01 UTC</createdTime>
+<generatorID>63C2FEE7-9CF1-6A62-BEFF-C3E8041A0C6B</generatorID>
+<ownerDesignName>cp5</ownerDesignName>
+<engineerTo>
+<item key="F5FC75D5-11D1-441E-EC52-D13DFC3FE29F" value="true"/>
+</engineerTo>
+<referedAttribute>31CCE05D-CDCB-3E80-ADB5-6D8348B4C9AC</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="cpf" id="61E33BF6-BED6-0B40-5C07-2B3F9038C10E">
+<createdBy>labsfiap</createdBy>
+<createdTime>2024-10-02 12:23:34 UTC</createdTime>
+<generatorID>90850BC2-9032-4F2A-726E-310BFFAC0FF5</generatorID>
+<ownerDesignName>cp5</ownerDesignName>
+<engineerTo>
+<item key="F5FC75D5-11D1-441E-EC52-D13DFC3FE29F" value="true"/>
+</engineerTo>
+<referedAttribute>BD0591C2-6BD5-B307-C195-8A112886C58D</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="95D41A13-81E3-9133-BD70-EB225DC9DC5D" name="Reserva PK">
+<createdBy>labsfiap</createdBy>
+<createdTime>2024-10-02 12:07:36 UTC</createdTime>
+<ownerDesignName>cp5</ownerDesignName>
+<engineerTo>
+<item key="F5FC75D5-11D1-441E-EC52-D13DFC3FE29F" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>A269457F-2B4A-B81C-AD69-BE481B833277</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

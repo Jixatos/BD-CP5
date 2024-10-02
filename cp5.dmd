@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="cp5" id="C21DAA06-3975-6D0E-B403-1403A433242E" version="3.5">
+<createdBy>labsfiap</createdBy>
+<createdTime>2024-10-02 11:27:41 UTC</createdTime>
+<ownerDesignName>cp5</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>C21DAA06-3975-6D0E-B403-1403A433242E</designId>
+</OSDM_Design>
