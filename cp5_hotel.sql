@@ -212,7 +212,6 @@ BEGIN
     DBMS_OUTPUT.PUT_LINE('Relatório de Ocupação de Quartos');
     DBMS_OUTPUT.PUT_LINE('----------------------------------');
 
-    -- Cursor simplificado para buscar informações de ocupação
     FOR rec IN (
         SELECT r.id_reserva,
                c.nome AS nome_cliente,
@@ -225,7 +224,6 @@ BEGIN
         JOIN quarto q ON r.quarto_numero = q.numero
         WHERE r.status IN ('Confirmada', 'Em andamento')
     ) LOOP
-        -- Exibe cada linha do relatório
         DBMS_OUTPUT.PUT_LINE(rec.id_reserva || ' | ' || 
                              rec.nome_cliente || ' | ' || 
                              rec.numero_quarto || ' | ' || 
