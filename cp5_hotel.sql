@@ -204,7 +204,65 @@ BEGIN
    v_valor_descontado := v_valor_descontado * (1 - (p_desconto/100));
     RETURN v_valor_descontado;
 END;
+/
 
 -- Procedure
+CREATE OR REPLACE PROCEDURE gerar_relatorio_ocupacao AS
+BEGIN
+    DBMS_OUTPUT.PUT_LINE('Relatório de Ocupação de Quartos');
+    DBMS_OUTPUT.PUT_LINE('----------------------------------');
 
-        
+    -- Cursor simplificado para buscar informações de ocupação
+    FOR rec IN (
+        SELECT r.id_reserva,
+               c.nome AS nome_cliente,
+               q.numero AS numero_quarto,
+               TO_CHAR(r.dt_inicio, 'DD/MM/YYYY') AS data_inicio,
+               TO_CHAR(r.dt_fim, 'DD/MM/YYYY') AS data_fim,
+               r.status
+        FROM reserva r
+        JOIN cliente c ON r.cliente_cpf = c.cpf
+        JOIN quarto q ON r.quarto_numero = q.numero
+        WHERE r.status IN ('Confirmada', 'Em andamento')
+    ) LOOP
+        -- Exibe cada linha do relatório
+        DBMS_OUTPUT.PUT_LINE(rec.id_reserva || ' | ' || 
+                             rec.nome_cliente || ' | ' || 
+                             rec.numero_quarto || ' | ' || 
+                             rec.data_inicio || ' | ' || 
+                             rec.data_fim || ' | ' || 
+                             rec.status);
+    END LOOP;
+
+    DBMS_OUTPUT.PUT_LINE('----------------------------------');
+    DBMS_OUTPUT.PUT_LINE('Relatório gerado com sucesso!');
+
+EXCEPTION
+    WHEN OTHERS THEN
+        DBMS_OUTPUT.PUT_LINE('Erro: ' || SQLERRM);
+END gerar_relatorio_ocupacao;
+/
+
+-- Teste TRIGGER
+BEGIN
+    INSERT INTO manutencao (id_manutencao, dt_manutencao, descricao, id_colaborador, quarto_numero) 
+    VALUES (6, TO_DATE('2023-10-06', 'YYYY-MM-DD'), 'Limpeza', 2, 101);
+END;
+/
+
+SELECT * FROM quarto WHERE numero = 101;
+
+-- Teste FUNCTION 
+DECLARE
+    v_valor NUMBER;
+BEGIN
+    v_valor := aplicar_desconto(1, 10);
+    DBMS_OUTPUT.PUT_LINE('Valor final descontado: ' || v_valor);
+END;
+/
+
+-- Teste PROCEDURE
+BEGIN
+    gerar_relatorio_ocupacao;
+END;
+/
