@@ -5,6 +5,15 @@ RM551408 - Juan de Godoy
 RM550548 - Gustavo de Oliveira Azevedo
 */
 
+-- DROP's das tabelas
+DROP TABLE pagamento CASCADE CONSTRAINTS;
+DROP TABLE manutencao CASCADE CONSTRAINTS;
+DROP TABLE reserva CASCADE CONSTRAINTS;
+DROP TABLE quarto CASCADE CONSTRAINTS;
+DROP TABLE colaborador CASCADE CONSTRAINTS;
+DROP TABLE cliente CASCADE CONSTRAINTS;
+DROP TABLE categoria CASCADE CONSTRAINTS;
+
 -- CREATE's das tabelas
 CREATE TABLE categoria (
     id_categoria INTEGER NOT NULL,
@@ -181,6 +190,21 @@ CREATE OR REPLACE TRIGGER manutencao_quartos AFTER
 BEGIN
     UPDATE quarto
     SET quarto.status = 'EM MANUTENÇÃO'
-    WHERE quarto.numero = :new.quarto_numero;
+    WHERE quarto.numero = :NEW.quarto_numero;
 END;
 /
+
+-- Function
+CREATE OR REPLACE FUNCTION aplicar_desconto(p_id NUMBER, p_desconto NUMBER)
+RETURN NUMBER
+IS 
+    v_valor_descontado NUMBER := 0;
+BEGIN
+   SELECT valor INTO v_valor_descontado FROM reserva WHERE id_reserva = p_id;
+   v_valor_descontado := v_valor_descontado * (1 - (p_desconto/100));
+    RETURN v_valor_descontado;
+END;
+
+-- Procedure
+
+        
