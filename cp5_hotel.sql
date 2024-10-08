@@ -107,7 +107,7 @@ ALTER TABLE reserva
 -- INSERT's das tabelas
 BEGIN
     INSERT INTO categoria (id_categoria, nome) VALUES (1, 'Luxo');
-    INSERT INTO categoria (id_categoria, nome) VALUES (2, 'Econômico');
+    INSERT INTO categoria (id_categoria, nome) VALUES (2, 'Econï¿½mico');
     INSERT INTO categoria (id_categoria, nome) VALUES (3, 'Executivo');
     INSERT INTO categoria (id_categoria, nome) VALUES (4, 'Presidencial');
     INSERT INTO categoria (id_categoria, nome) VALUES (5, 'Standard');
@@ -115,7 +115,7 @@ END;
 /
 
 BEGIN
-    INSERT INTO cliente (cpf, nome, telefone) VALUES ('12345678900', 'João Silva', '11987654321');
+    INSERT INTO cliente (cpf, nome, telefone) VALUES ('12345678900', 'Joï¿½o Silva', '11987654321');
     INSERT INTO cliente (cpf, nome, telefone) VALUES ('98765432100', 'Maria Oliveira', '11987651234');
     INSERT INTO cliente (cpf, nome, telefone) VALUES ('12312312300', 'Pedro Santos', '11999998888');
     INSERT INTO cliente (cpf, nome, telefone) VALUES ('32132132100', 'Ana Pereira', '11988887777');
@@ -124,19 +124,19 @@ END;
 /
 
 BEGIN   
-    INSERT INTO colaborador (id_colaborador, nome, cpf, cargo) VALUES (1, 'Lucas Almeida', '98798798700', 'Gerente de Manutenção');
+    INSERT INTO colaborador (id_colaborador, nome, cpf, cargo) VALUES (1, 'Lucas Almeida', '98798798700', 'Gerente de Manutenï¿½ï¿½o');
     INSERT INTO colaborador (id_colaborador, nome, cpf, cargo) VALUES (2, 'Fernanda Costa', '65465465400', 'Recepcionista');
     INSERT INTO colaborador (id_colaborador, nome, cpf, cargo) VALUES (3, 'Roberto Nunes', '32132165400', 'Supervisor de Limpeza');
     INSERT INTO colaborador (id_colaborador, nome, cpf, cargo) VALUES (4, 'Juliana Santos', '45645678900', 'Atendente');
-    INSERT INTO colaborador (id_colaborador, nome, cpf, cargo) VALUES (5, 'Paulo Rodrigues', '78978912300', 'Segurança');
+    INSERT INTO colaborador (id_colaborador, nome, cpf, cargo) VALUES (5, 'Paulo Rodrigues', '78978912300', 'Seguranï¿½a');
 END;
 /
 
 BEGIN
-    INSERT INTO quarto (numero, status, id_categoria) VALUES (101, 'Disponível', 1);
+    INSERT INTO quarto (numero, status, id_categoria) VALUES (101, 'Disponï¿½vel', 1);
     INSERT INTO quarto (numero, status, id_categoria) VALUES (102, 'Ocupado', 2);
-    INSERT INTO quarto (numero, status, id_categoria) VALUES (103, 'Disponível', 3);
-    INSERT INTO quarto (numero, status, id_categoria) VALUES (104, 'Manutenção', 4);
+    INSERT INTO quarto (numero, status, id_categoria) VALUES (103, 'Disponï¿½vel', 3);
+    INSERT INTO quarto (numero, status, id_categoria) VALUES (104, 'Manutenï¿½ï¿½o', 4);
     INSERT INTO quarto (numero, status, id_categoria) VALUES (105, 'Ocupado', 5);
 END;
 /
@@ -147,7 +147,7 @@ BEGIN
     INSERT INTO manutencao (id_manutencao, dt_manutencao, descricao, id_colaborador, quarto_numero) 
     VALUES (2, TO_DATE('2023-10-02', 'YYYY-MM-DD'), 'Pintura de paredes', 3, 104);
     INSERT INTO manutencao (id_manutencao, dt_manutencao, descricao, id_colaborador, quarto_numero) 
-    VALUES (3, TO_DATE('2023-10-03', 'YYYY-MM-DD'), 'Troca de lâmpadas', 1, 105);
+    VALUES (3, TO_DATE('2023-10-03', 'YYYY-MM-DD'), 'Troca de lï¿½mpadas', 1, 105);
     INSERT INTO manutencao (id_manutencao, dt_manutencao, descricao, id_colaborador, quarto_numero) 
     VALUES (4, TO_DATE('2023-10-04', 'YYYY-MM-DD'), 'Limpeza profunda', 3, 102);
     INSERT INTO manutencao (id_manutencao, dt_manutencao, descricao, id_colaborador, quarto_numero) 
@@ -171,15 +171,15 @@ END;
 
 BEGIN
     INSERT INTO pagamento (id_pagamento, dt_pagamento, tipo_pagamento, valor, id_reserva)
-    VALUES (1, TO_DATE('2023-09-20', 'YYYY-MM-DD'), 'Cartão de Crédito', 1200.00, 1);
+    VALUES (1, TO_DATE('2023-09-20', 'YYYY-MM-DD'), 'Cartï¿½o de Crï¿½dito', 1200.00, 1);
     INSERT INTO pagamento (id_pagamento, dt_pagamento, tipo_pagamento, valor, id_reserva)
-    VALUES (2, TO_DATE('2023-09-21', 'YYYY-MM-DD'), 'Cartão de Débito', 850.00, 2);
+    VALUES (2, TO_DATE('2023-09-21', 'YYYY-MM-DD'), 'Cartï¿½o de Dï¿½bito', 850.00, 2);
     INSERT INTO pagamento (id_pagamento, dt_pagamento, tipo_pagamento, valor, id_reserva)
     VALUES (3, TO_DATE('2023-09-22', 'YYYY-MM-DD'), 'Boleto', 1000.00, 3);
     INSERT INTO pagamento (id_pagamento, dt_pagamento, tipo_pagamento, valor, id_reserva)
     VALUES (4, TO_DATE('2023-09-23', 'YYYY-MM-DD'), 'Pix', 950.00, 4);
     INSERT INTO pagamento (id_pagamento, dt_pagamento, tipo_pagamento, valor, id_reserva)
-    VALUES (5, TO_DATE('2023-09-24', 'YYYY-MM-DD'), 'Cartão de Crédito', 1300.00, 5);
+    VALUES (5, TO_DATE('2023-09-24', 'YYYY-MM-DD'), 'Cartï¿½o de Crï¿½dito', 1300.00, 5);
 END;
 /
 
@@ -189,7 +189,7 @@ CREATE OR REPLACE TRIGGER manutencao_quartos AFTER
     FOR EACH ROW
 BEGIN
     UPDATE quarto
-    SET quarto.status = 'EM MANUTENÇÃO'
+    SET quarto.status = 'EM MANUTENï¿½ï¿½O'
     WHERE quarto.numero = :NEW.quarto_numero;
 END;
 /
@@ -209,7 +209,7 @@ END;
 -- Procedure
 CREATE OR REPLACE PROCEDURE gerar_relatorio_ocupacao AS
 BEGIN
-    DBMS_OUTPUT.PUT_LINE('Relatório de Ocupação de Quartos');
+    DBMS_OUTPUT.PUT_LINE('Relatï¿½rio de Ocupaï¿½ï¿½o de Quartos');
     DBMS_OUTPUT.PUT_LINE('----------------------------------');
 
     FOR rec IN (
@@ -233,13 +233,42 @@ BEGIN
     END LOOP;
 
     DBMS_OUTPUT.PUT_LINE('----------------------------------');
-    DBMS_OUTPUT.PUT_LINE('Relatório gerado com sucesso!');
+    DBMS_OUTPUT.PUT_LINE('Relatï¿½rio gerado com sucesso!');
 
 EXCEPTION
     WHEN OTHERS THEN
         DBMS_OUTPUT.PUT_LINE('Erro: ' || SQLERRM);
 END gerar_relatorio_ocupacao;
 /
+
+-- Package
+
+CREATE OR REPLACE PACKAGE pkg_reserva AS 
+ PROCEDURE atualiza_valor_desconto(
+ p_id_reserva IN reserva.ID_RESERVA%TYPE,
+ p_desconto IN NUMBER);
+END pkg_reserva;
+/
+
+CREATE OR REPLACE PACKAGE BODY pkg_reserva AS
+    -- Procedimento para atualizar o valor da reserva com desconto
+    PROCEDURE atualiza_valor_desconto(
+        p_id_reserva    IN reserva.id_reserva%TYPE,
+        p_desconto      IN NUMBER
+    ) IS
+        v_valor_descontado NUMBER;
+    BEGIN
+        v_valor_descontado := aplicar_desconto(p_id_reserva, p_desconto);
+
+        UPDATE reserva
+        SET valor = v_valor_descontado
+        WHERE id_reserva = p_id_reserva;
+        
+        COMMIT;
+    END atualiza_valor_desconto;
+END pkg_reserva;
+/
+
 
 -- Teste TRIGGER
 BEGIN
@@ -264,3 +293,15 @@ BEGIN
     gerar_relatorio_ocupacao;
 END;
 /
+
+-- Teste Package
+
+BEGIN
+    pkg_reserva.atualiza_valor_desconto(p_id_reserva => 1, p_desconto => 10);
+END;
+/
+
+SELECT id_reserva, valor
+FROM reserva
+WHERE id_reserva = 1;
+
